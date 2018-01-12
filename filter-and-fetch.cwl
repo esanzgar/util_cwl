@@ -15,7 +15,7 @@ inputs:
     doc: Database to be searched
 
 outputs:
-  sequences:
+  ids:
     label: Sequence in FASTA format
     doc: Output file contains sequences in FASTA format
     type: File
