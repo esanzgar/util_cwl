@@ -1,6 +1,8 @@
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: filter.sh
+requirements:
+    - class: InlineJavascriptRequirement
 hints:
   DockerRequirement:
     dockerPull: esanzgar/util_cwl
@@ -21,6 +23,9 @@ inputs:
 
 outputs:
   out:
-    type: File
+    type: string[]
     outputBinding:
       glob: out.txt
+      loadContents: true
+      outputEval: $(self[0].contents.split(/\s/))
+
