@@ -25,8 +25,7 @@ steps:
   filter:
     label: Filter sequences
     doc: Filter sequences by matching identifiers
-    # run: https://raw.githubusercontent.com/esanzgar/util_cwl/master/filter.cwl
-    run: filter.cwl
+    run: filter_ids.cwl
     in:
       file-accessions: file-accessions
       codes: codes

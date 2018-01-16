@@ -4,4 +4,4 @@ FROM nginx:alpine
 # Install bash
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 
-COPY filter.sh /usr/local/bin/
+COPY filter_* /usr/local/bin/

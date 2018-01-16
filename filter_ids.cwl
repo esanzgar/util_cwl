@@ -1,6 +1,6 @@
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: filter.sh
+baseCommand: filter_ids.sh
 requirements:
     - class: InlineJavascriptRequirement
 hints:
@@ -28,4 +28,3 @@ outputs:
       glob: out.txt
       loadContents: true
       outputEval: $(self[0].contents.split(/\s/))
-
